@@ -66,7 +66,8 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 {
     startDate: Date;
     days: Array<UnitsDay>;
-    base: PlanWeek;
+    weekNumber: number;
+    lastChanged: number;
 }
 ```
 ### UnitsDayObject
