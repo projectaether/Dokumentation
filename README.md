@@ -6,7 +6,7 @@ Bei der API handelt es sich um eine REST-API.
 Das bedeutet, dass Anfragen per GET-Parameter getätigt werden und somit jede Programmiersprache ohne Client-Library genutzt werden kann.  
 Beispiele sind unten zu finden.  
 
-Baasis-URL: ```https://api.hgg.zusor.io/```
+Basis-URL: ```https://api.hgg.zusor.io/```
 
 ## Endpoints
 
@@ -78,13 +78,13 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 }
 ```
 ### UntisLessonObject
-[UnitsSubjectObject Reference](#UnitsSubjectObject)
+[UntisSubjectObject Reference](#UntisSubjectObject)
 ```ts
 {
-    subjects: Array<UnitsSubject>;
+    subjects: Array<UntisSubject>;
 }
 ```
-### UnitsSubjectObject
+### UntisSubjectObject
 ```ts
 {
     name: string;
@@ -92,5 +92,6 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     teacher?: string;
     changed?: boolean;
     special?: boolean;
+    isCoop?: boolean;
 }
 ```
