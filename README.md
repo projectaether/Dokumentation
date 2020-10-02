@@ -43,20 +43,21 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 [PlanWeekObject Reference](#PlanWeekObject)
 ```ts
 {
-    name: string;
-    internalID: string;
-    available: boolean;
-    lastFetched?: number;
-    weeks?: PlanWeek[];
+    name: string;                   // Klassen-Name Bsp: "5a"
+    internalID: string;             // Bsp: "c00001"
+    available: boolean;             // Wenn "true" ist der Plan per API verfügbar
+    lastFetched?: number;           // Die API arbeitet mit einer Version, die zu diesem Zeitpunkt vom HGG-Server geladen wurde
+    weeks?: PlanWeek[];             // Die nächsten 4 Wochen
 }
 ```
 ### PlanWeekObject
 ```ts
 {
-    html: string;
-    weekNumber: number;
-    lastChanged: number;
-    debug?: string;
+    html: string;                   // HTML, dass den Vertretungsplan darstellt
+    weekNumber: number;             // Wochen-Nummer
+    lastChanged: number;            // Die letzte erkannte Änderung
+    startDate: Date;                // 🆕 Datum der Woche (Montag)
+    debug?: string;                 // ⛔ Reserviert
 }
 ```
 ---
@@ -64,35 +65,35 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 [PlanWeekObject Reference](#PlanWeekObject)
 ```ts
 {
-    startDate: Date;
-    days: Array<UnitsDay>;
-    weekNumber: number;
-    lastChanged: number;
+    startDate: Date;                // 🆕 Datum der Woche (Montag)
+    days: Array<UnitsDay>;          // Alle Tage der Woche
+    weekNumber: number;             // Wochen-Nummer
+    lastChanged: number;            // Die letzte erkannte Änderung
 }
 ```
 ### UnitsDayObject
 [UntisLessonObject Reference](#UntisLessonObject)
 ```ts
 {
-    date: Date;
-    lessons: Array<UntisLesson>;
+    date: Date;                     // 🆕 Datum des Tages
+    lessons: Array<UntisLesson>;    // Alle Stunden des Tages (Index entspricht der Reihenfolge (1. Stunde, 2. Stunde, ...))
 }
 ```
 ### UntisLessonObject
 [UntisSubjectObject Reference](#UntisSubjectObject)
 ```ts
 {
-    subjects: Array<UntisSubject>;
+    subjects: Array<UntisSubject>;  // Alle Fächer in dieser Stunde
 }
 ```
 ### UntisSubjectObject
 ```ts
 {
-    name: string;
-    room?: string;
-    teacher?: string;
-    changed?: boolean;
-    special?: boolean;
-    isCoop?: boolean;
+    name: string;                   // Name des Fachs z.B. "De"
+    room?: string;                  // Raum z.B. "Aula"
+    teacher?: string;               // ⛔ Reserviert
+    changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) ( ⚠️ Ist bei allen Fächern in einer Stunde gleich! ⚠️ )
+    special?: boolean;              // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
+    isCoop?: boolean;               // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
 }
 ```
