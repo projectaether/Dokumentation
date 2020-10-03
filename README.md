@@ -50,6 +50,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     internalID: string;             // Bsp: "c00001"
     available: boolean;             // Wenn "true" ist der Plan per API verfügbar
     lastFetched?: number;           // Die API arbeitet mit einer Version, die zu diesem Zeitpunkt vom HGG-Server geladen wurde
+    lastChanged?: number;           // 🆕 Letzte Änderung der neusten Woche
     weeks?: PlanWeek[];             // Die nächsten 4 Wochen
 }
 ```
