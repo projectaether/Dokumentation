@@ -22,7 +22,7 @@ Liste aller Klassen am HGG. [PlanObject Reference](#planobject)
 ```
 
 ### Raw Class HTML
-**GET** ```/classes/raw/${KlassName}```  
+**GET** ```/classes/${KlassName}/5a```  
 Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [PlanWeekObject Reference](#planweekobject)
 ```json
 {
@@ -34,8 +34,8 @@ Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}
 ```
 
 ### Parsed Class HTML
-**GET** ```/classes/parsed/${KlassName}```  
-**GET** ```/classes/parsed/${KlassName}?filter=${filter}``` 🆕 [Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
+**GET** ```/classes/${KlassName}/parsed```  
+**GET** ```/classes/${KlassName}/parsed?filter=${filter}``` 🆕 [Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
 Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#UnitsWeekObject)
 ```json
 [ UntisWeekObject ]
