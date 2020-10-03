@@ -64,8 +64,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 }
 ```
 ---
-### UnitsWeekObject
-[PlanWeekObject Reference](#PlanWeekObject)
+### UntisWeekObject
 ```ts
 {
     startDate: Date;                // 🆕 Datum der Woche (Montag)
@@ -74,7 +73,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     lastChanged: number;            // Die letzte erkannte Änderung
 }
 ```
-### UnitsDayObject
+### UntisDayObject
 [UntisLessonObject Reference](#UntisLessonObject)
 ```ts
 {
