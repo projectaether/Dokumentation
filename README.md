@@ -1,5 +1,7 @@
 # API Dokumentation
 
+[Was ist **ProjectAether**?](https://projectaether.github.io/)
+
 ## Get Started
 
 Bei der API handelt es sich um eine REST-API.  
