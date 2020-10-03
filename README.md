@@ -51,6 +51,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     available: boolean;             // Wenn "true" ist der Plan per API verfügbar
     lastFetched?: number;           // Die API arbeitet mit einer Version, die zu diesem Zeitpunkt vom HGG-Server geladen wurde
     lastChanged?: number;           // 🆕 Letzte Änderung der neusten Woche
+    teacher?: string;               // 🆕 Klassenlehrer
     weeks?: PlanWeek[];             // Die nächsten 4 Wochen
 }
 ```
@@ -60,7 +61,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     html: string;                   // HTML, dass den Vertretungsplan darstellt
     weekNumber: number;             // Wochen-Nummer
     lastChanged: number;            // Die letzte erkannte Änderung
-    startDate: Date;                // 🆕 Datum der Woche (Montag)
+    startDate: Date;                // Datum der Woche (Montag)
     debug?: string;                 // ⛔ Reserviert
 }
 ```
@@ -68,7 +69,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 ### UntisWeekObject
 ```ts
 {
-    startDate: Date;                // 🆕 Datum der Woche (Montag)
+    startDate: Date;                // Datum der Woche (Montag)
     days: Array<UnitsDay>;          // Alle Tage der Woche
     weekNumber: number;             // Wochen-Nummer
     lastChanged: number;            // Die letzte erkannte Änderung
@@ -78,7 +79,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 [UntisLessonObject Reference](#UntisLessonObject)
 ```ts
 {
-    date: Date;                     // 🆕 Datum des Tages
+    date: Date;                     // Datum des Tages
     lessons: Array<UntisLesson>;    // Alle Stunden des Tages (Index entspricht der Reihenfolge (1. Stunde, 2. Stunde, ...))
 }
 ```
