@@ -33,6 +33,7 @@ Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}
 
 ### Parsed Class HTML
 **GET** ```/classes/parsed/${KlassName}```  
+**GET** ```/classes/parsed/${KlassName}?filter=${filter}``` 🆕 [Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
 Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#UnitsWeekObject)
 ```json
 [ UntisWeekObject ]
