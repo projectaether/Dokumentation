@@ -10,6 +10,9 @@ Beispiele sind unten zu finden.
 
 Basis-URL: ```https://api.hgg.zusor.io/```
 
+## Richtlinien
+⚠️ Namen von Klassen werden *immer* **klein** geschrieben ⚠️
+
 ## Endpoints
 
 ### Class List
@@ -22,12 +25,12 @@ Liste aller Klassen am HGG. [PlanObject Reference](#planobject)
 ```
 
 ### Raw Class HTML
-**GET** ```/classes/${KlassName}/5a```  
+**GET** ```/classes/${KlassName}/raw```  
 Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [PlanWeekObject Reference](#planweekobject)
 ```json
 {
     "internalID": "c00001",
-    "name": "5A",
+    "name": "5a",
     "available": true,
     "weeks": [ PlanWeekObject ]
 }
