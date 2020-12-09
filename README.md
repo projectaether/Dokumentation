@@ -45,7 +45,7 @@ Alle Fächer als Array für die mit ```${KlassName}``` angegebene Klasse.
 
 ### 🆕 Class Timetable  
 **GET** ```/classes/${KlassName}/timetable```   
-Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#uitsweekobject)
+Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
 ```json
 [ UntisWeekObject ]
 ```
@@ -53,7 +53,7 @@ Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${K
 ### Parsed Class HTML
 **GET** ```/classes/${KlassName}/parsed```  
 **GET** ```/classes/${KlassName}/parsed?filter=${filter}``` 🆕 [New Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
-Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#uitsweekobject)
+Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
 ```json
 [ UntisWeekObject ]
 ```
