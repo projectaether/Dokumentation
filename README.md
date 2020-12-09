@@ -53,8 +53,8 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     internalID: string;             // Bsp: "c00001"
     available: boolean;             // Wenn "true" ist der Plan per API verfügbar
     lastFetched?: number;           // Die API arbeitet mit einer Version, die zu diesem Zeitpunkt vom HGG-Server geladen wurde
-    lastChanged?: number;           // 🆕 Letzte Änderung der neusten Woche
-    teacher?: string;               // 🆕 Klassenlehrer
+    lastChanged?: number;           // Letzte Änderung der neusten Woche
+    teacher?: string;               // Klassenlehrer
     weeks?: PlanWeek[];             // Die nächsten 4 Wochen
 }
 ```
@@ -98,7 +98,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 {
     name: string;                   // Name des Fachs z.B. "De"
     room?: string;                  // Raum z.B. "Aula"
-    teacher?: string;               // ⛔ Reserviert
+    teacher?: string;               // 🆕 Zeigt den Lehrer für diese Fach
     changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) ( ⚠️ Ist bei allen Fächern in einer Stunde gleich! ⚠️ )
     special?: boolean;              // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
     isCoop?: boolean;               // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
