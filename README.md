@@ -113,8 +113,10 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
     name: string;                   // Name des Fachs z.B. "De"
     room?: string;                  // Raum z.B. "Aula"
     teacher?: string;               // 🆕 Zeigt den Lehrer für diese Fach
-    changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) ( ⚠️ Ist bei allen Fächern in einer Stunde gleich! ⚠️ )
+    changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) 🆕 Wird jetzt individuell angezeigt!
     special?: boolean;              // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
     isCoop?: boolean;               // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
+    notice?: string;                // Bemerkungen aus Ver-Kla-Dru
+    changeType?: string;            // Die Art der Änderung aus Ver-Kla-Dru
 }
 ```
