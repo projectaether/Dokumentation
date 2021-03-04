@@ -11,7 +11,7 @@ Beispiele sind unten zu finden.
 Basis-URL: ```https://api.hgg.zusor.io/```
 
 ## Richtlinien
-⚠️ Namen von Klassen werden *immer* **klein** geschrieben ⚠️
+- ⚠️ Namen von Klassen werden *immer* **klein** geschrieben ⚠️
 
 ## Endpoints
 
@@ -36,14 +36,14 @@ Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}
 }
 ```
 
-### 🆕 Class Subjects List   
+### Class Subjects List   
 **GET** ```/classes/${KlassName}/subjects```  
 Alle Fächer als Array für die mit ```${KlassName}``` angegebene Klasse.
 ```json
 [ string ]
 ```
 
-### 🆕 Class Timetable  
+### Class Timetable  
 **GET** ```/classes/${KlassName}/timetable```   
 Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
 ```json
@@ -52,7 +52,7 @@ Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${K
 
 ### Parsed Class HTML
 **GET** ```/classes/${KlassName}/parsed```  
-**GET** ```/classes/${KlassName}/parsed?filter=${filter}``` 🆕 [New Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
+**GET** ```/classes/${KlassName}/parsed?filter=${filter}``` [New Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
 Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
 ```json
 [ UntisWeekObject ]
@@ -98,6 +98,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 {
     date: Date;                     // Datum des Tages
     lessons: Array<UntisLesson>;    // Alle Stunden des Tages (Index entspricht der Reihenfolge (1. Stunde, 2. Stunde, ...))
+    infos?: Map<string, string>;    // 🆕 Infos für den Tag aus Ver-Kla-Dru
 }
 ```
 ### UntisLessonObject
@@ -112,7 +113,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 {
     name: string;                   // Name des Fachs z.B. "De"
     room?: string;                  // Raum z.B. "Aula"
-    teacher?: string;               // 🆕 Zeigt den Lehrer für diese Fach
+    teacher?: string;               // Zeigt den Lehrer für diese Fach
     changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) 🆕 Wird jetzt individuell angezeigt!
     special?: boolean;              // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
     isCoop?: boolean;               // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
