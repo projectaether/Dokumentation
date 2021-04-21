@@ -12,7 +12,7 @@ Liste aller Klassen am HGG. [PlanObject Reference](/TypeDefinitions#planobject)
 ## Parsed Class HTML
 **GET** ```/classes/${KlassName}/parsed```  
 **GET** ```/classes/${KlassName}/parsed?filter=${filter}``` [Filter Reference](/Filter)   
-Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
+Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](/TypeDefinitions#untisweekobject)
 ```json
 [ UntisWeekObject ]
 ```
