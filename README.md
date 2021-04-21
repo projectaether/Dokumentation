@@ -14,4 +14,4 @@ Basis-URL: ```https://api.hgg.zusor.io/```
 - ⚠️ Namen von Klassen werden *immer* **klein** geschrieben ⚠️
 
 ## Endpoints
-[Hier Lang](https://projectaether.github.io/Dokumentation/Endpoints)
+[Hier Lang](https://projectaether.github.io/Dokumentation/EndpointList)
