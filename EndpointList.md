@@ -2,7 +2,7 @@
 
 ## Class List
 **GET** ```/classes```  
-Liste aller Klassen am HGG. [PlanObject Reference](https://projectaether.github.io/Dokumentation/TypeDefinitions#planobject)
+Liste aller Klassen am HGG. [PlanObject Reference](/TypeDefinitions#planobject)
 ```json
 {
     "classes": [ PlanObject ]
@@ -11,7 +11,7 @@ Liste aller Klassen am HGG. [PlanObject Reference](https://projectaether.github.
 
 ## Parsed Class HTML
 **GET** ```/classes/${KlassName}/parsed```  
-**GET** ```/classes/${KlassName}/parsed?filter=${filter}``` [Filter Reference](https://projectaether.github.io/Dokumentation/Filter)   
+**GET** ```/classes/${KlassName}/parsed?filter=${filter}``` [Filter Reference](/Filter)   
 Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](#untisweekobject)
 ```json
 [ UntisWeekObject ]
@@ -19,7 +19,7 @@ Vertretungsplan als spezielles JSON für alle angezeigten Wochen für die mit ``
 
 ## Raw Class HTML
 **GET** ```/classes/${KlassName}/raw```  
-Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [PlanWeekObject Reference](https://projectaether.github.io/Dokumentation/TypeDefinitions#planweekobject)
+Vertretungsplan - HTML für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [PlanWeekObject Reference](/TypeDefinitions#planweekobject)
 ```json
 {
     "internalID": "c00001",
@@ -38,7 +38,7 @@ Alle Fächer als Array für die mit ```${KlassName}``` angegebene Klasse.
 
 ## Class Timetable  
 **GET** ```/classes/${KlassName}/timetable```   
-Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](https://projectaether.github.io/Dokumentation/TypeDefinitions#untisweekobject)
+Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${KlassName}``` angegebene Klasse. [UntisWeekObject Reference](/TypeDefinitions#untisweekobject)
 ```json
 [ UntisWeekObject ]
 ```
@@ -47,7 +47,7 @@ Stundenplan als spezielles JSON für alle angezeigten Wochen für die mit ```${K
 
 ## News Feed
 **GET** ```/feed/hgg/news```   
-News der HGG Seite in übersichtlichem JSON. [JoomlaFeedEntry Reference](https://projectaether.github.io/Dokumentation/TypeDefinitions#joomlafeedentry)
+News der HGG Seite in übersichtlichem JSON. [JoomlaFeedEntry Reference](/TypeDefinitions#joomlafeedentry)
 ```json
 [ JoomlaFeedEntry ]
 ```
