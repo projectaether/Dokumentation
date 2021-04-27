@@ -15,11 +15,10 @@
 ## PlanWeekObject
 ```ts
 {
-    html: string;                   // HTML, dass den Vertretungsplan darstellt
-    weekNumber: number;             // Wochen-Nummer
-    lastChanged: number;            // Die letzte erkannte Änderung
-    startDate: Date;                // Datum der Woche (Montag)
-    debug?: string;                 // ⛔ Reserviert
+  weekNumber: number; // Wochen-Nummer
+  lastChanged: number; // Die letzte erkannte Änderung
+  startDate: DateTime; // Datum der Woche (Montag)
+  html: string; // HTML, dass den Vertretungsplan darstellt
 }
 ```
 
@@ -40,9 +39,9 @@
 [UntisLessonObject Reference](#untislessonobject)
 ```ts
 {
-    date: Date;                     // Datum des Tages
-    lessons: Array<UntisLesson>;    // Alle Stunden des Tages (Index entspricht der Reihenfolge (1. Stunde, 2. Stunde, ...))
-    infos?: Map<string, string>;    // 🆕 Infos für den Tag aus Ver-Kla-Dru
+  date: DateTime; // Datum des Tages
+  lessons: Array<UntisLesson>; // Alle Stunden des Tages (Index entspricht der Reihenfolge (1. Stunde, 2. Stunde, ...))
+  infos?: any; // 🆕 Infos für den Tag aus Ver-Kla-Dru
 }
 ```
 ## UntisLessonObject
@@ -55,14 +54,19 @@
 ## UntisSubjectObject
 ```ts
 {
-    name: string;                   // Name des Fachs z.B. "De"
-    room?: string;                  // Raum z.B. "Aula"
-    teacher?: string;               // Zeigt den Lehrer für diese Fach
-    changed?: boolean;              // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) 🆕 Wird jetzt individuell angezeigt!
-    special?: boolean;              // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
-    isCoop?: boolean;               // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
-    notice?: string;                // Bemerkungen aus Ver-Kla-Dru
-    changeType?: string;            // Die Art der Änderung aus Ver-Kla-Dru
+  name: string; // Name des Fachs z.B. "De"
+  room?: string; // Raum z.B. "Aula"
+  teacher?: string; // 🆕 Zeigt den Lehrer für diese Fach
+  changed?: boolean; // Sind für diese Stunde Änderungen vorgenommen? (Rot im Vertretungsplan) 🆕 Wird jetzt individuell angezeigt!
+  special?: boolean; // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
+  isCoop?: boolean; // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
+
+  hasExtraInfo: boolean; // Gibt an, ob die nachfolgenden Infos verfügbar sind
+
+  notice?: string; // Bemerkungen aus Ver-Kla-Dru
+  changeType?: string; // Die Art der Änderung aus Ver-Kla-Dru
+  isNew?: boolean; // 🆕 Zeigt an, ob dieser Eintrag seit dem letzten Update neu ist
+  oldName?: string; // 🆕 Dieses Fach war hier früher mal
 }
 ```
 
