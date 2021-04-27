@@ -61,7 +61,7 @@
   special?: boolean; // Ist das kein normaler Unterricht z.B. "Schulgottesdienst"
   isCoop?: boolean; // Sind in diesem Fach mehrere Klassen zusammen z.B. Religion / Ethik bzw. sind mehrere Lehrer für dieses Fach zuständig z.B. Sport (+ Schwimmen)
 
-  hasExtraInfo: boolean; // Gibt an, ob die nachfolgenden Infos verfügbar sind
+  hasExtraInfo: boolean; // 🆕🆕 Gibt an, ob die nachfolgenden Infos verfügbar sind
 
   notice?: string; // Bemerkungen aus Ver-Kla-Dru
   changeType?: string; // Die Art der Änderung aus Ver-Kla-Dru
