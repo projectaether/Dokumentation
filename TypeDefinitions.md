@@ -6,8 +6,6 @@
     name: string;                   // Klassen-Name Bsp: "5a"
     internalID: string;             // Bsp: "c00001"
     available: boolean;             // Wenn "true" ist der Plan per API verfügbar
-    lastFetched?: number;           // Die API arbeitet mit einer Version, die zu diesem Zeitpunkt vom HGG-Server geladen wurde
-    lastChanged?: number;           // Letzte Änderung der neusten Woche
     teacher?: string;               // Klassenlehrer
     weeks?: PlanWeek[];             // Die nächsten 4 Wochen
 }
@@ -78,19 +76,20 @@
 [JoomlaFeedAuthor Definition](#joomlafeedauthor)
 ```ts
 interface JoomlaFeedEntry {
-  title: string;
-  link: string;
-  content: string;
-  category: string;
-  author: JoomlaFeedAuthor;
-  date?: any;
+  title: string; // Title der Ankündigung
+  link: string; // Link zur HGG Seite
+  html: string; // 🆕 Inhalt
+  category: string; // Kathegorie
+  author: JoomlaFeedAuthor; // Autor
+  published: string; // 🆕 Veröffentlichungs Datum
+  updated: string; // 🆕 Änderungs-Datum
 }
 ```
 
 ## JoomlaFeedAuthor
 ```ts
 interface JoomlaFeedAuthor {
-  name: string;
-  email: string;
+  name: string; // Name des Autors
+  email: string; // Email des Autors
 }
 ```
