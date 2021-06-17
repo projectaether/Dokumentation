@@ -72,6 +72,20 @@
 <hr/>
 <br/>
 
+## SubjectInfo
+```ts
+  interface SubjectInfo {
+    name: string; // Name wie auf dem Vertretungsplan
+    fullName: string; // Langer Name (Beschreibung)
+    teacher: string; // Lehrer, der dieses Fach Unterrichtet
+    group: string; // Gruppe, zu dem dieses Fach gehört
+  }
+```
+
+<br/>
+<hr/>
+<br/>
+
 ## JoomlaFeedEntry
 [JoomlaFeedAuthor Definition](#joomlafeedauthor)
 ```ts

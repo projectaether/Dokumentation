@@ -35,6 +35,11 @@ Alle Fächer als Array für die mit ```${KlassName}``` angegebene Klasse.
 ```json
 [ string ]
 ```
+**GET** ```/classes/${KlassName}/subjects?details``` 🆕  
+Zusatzinformationen [SubjectInfo Reference](/TypeDefinitions#subjectinfo)
+```json
+[ SubjectInfo ]
+```
 
 ## Class Timetable  
 **GET** ```/classes/${KlassName}/timetable```   
